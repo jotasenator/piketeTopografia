@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html >
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adivino Personalidad</title>
+	
+
+	<style>
+		button{
+			
+			background:#6B8E23;
+			border-radius:15%;
+			color:white;
+			font-weight:bold;
+			height:100px;
+			width:200px;
+		}
+		body{
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 100vw;
+			
+			padding:10px;
+			
+		}
+		input{
+			padding:10px;
+			font-size: medium;
+		}
+		div{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top:50px;
+		}
+		span{
+			display: inline-block;			
+			margin-top: -36px;
+		}
+		
+		
+	</style>
+	
+</head>
+
+<body>
+	<h2>Piquete de la ENPA</h2>		
+	<div>	
+	<label for='input'><h2>Su nombre:&nbsp; </h2></label>
+	<input id='input' type='text' placeholder="Teclee su nombre">
+	</div>
+	<h2>Respire...</h2>
+	<div>
+	<h2>Presione el bot&oacute;n <span>&#128073;</span></h2>
+	<button id='button'>Escucha la verdad!</button>
+	</div>
+	<script>
+
+		let inputValue = document.getElementById('input');		
+		
+		const button = document.getElementById("button");
+		const speakEs=(msg,idioma='es-ES')=>{
+			
+			const sp=new SpeechSynthesisUtterance(msg);
+			sp.lang=idioma;
+			document.lastChild.lang=idioma
+			[sp.voice]=speechSynthesis.getVoices();
+			speechSynthesis.speak(sp)
+			
+		}
+		
+
+		button.onclick=()=>{
+			switch (inputValue.value.toLowerCase()) {
+				case 'Dani'.toLowerCase():
+					speakEs(`${inputValue.value} eres una loka maruja que lo unico que hace es acabar cuando va al baño jajaja`)
+					break
+					
+				case 'Daniosky'.toLowerCase():
+					speakEs(`${inputValue.value} eres una loka maruja que lo unico que hace es acabar cuando va al baño jajaja `)
+					break
+					
+
+				case 'Moises'.toLowerCase():
+					speakEs(`${inputValue.value} te están buscando en la escuela del partido para que des clases de comunismo en la tercera edad jajaja.`)
+					break
+				case 'Moisés'.toLowerCase():
+					speakEs(`${inputValue.value} te están buscando en la escuela del partido para que des clases de comunismo en la tercera edad jajaja.`)
+					break
+				case 'René'.toLowerCase():
+					 speakEs(`${inputValue.value} los muchachos están esperando con muchas ganas ir a hacer levantamientos en los canales.`)
+					break
+
+				case 'Rene'.toLowerCase():
+					 speakEs(`${inputValue.value} los muchachos están esperando con muchas ganas ir a hacer levantamientos en los canales.`)
+					break
+				case 'Valin'.toLowerCase():
+					 speakEs(`${inputValue.value} los muchachos están esperando con muchas ganas ir a hacer levantamientos en los canales.`)
+					break
+				case 'Valín'.toLowerCase():
+					 speakEs(`${inputValue.value} los muchachos están esperando con muchas ganas ir a hacer levantamientos en los canales.`)
+					break
+
+				case 'Luis'.toLowerCase():
+					 speakEs(`${inputValue.value} te están buscando para bajar media. Dice Maykel que le des un cigarrito.`)
+					 break
+					
+				case 'Luisito'.toLowerCase():
+					 speakEs(`${inputValue.value} te están buscando para bajar media. Dice Maykel que le des un cigarrito.`)
+					break
+				case 'Carlos'.toLowerCase():
+					 speakEs(`${inputValue.value} eres un viejito zorro, te estamos esperando en el 12 plantas, pero nadie te va a llevar para tu casa jajaja.`)
+					break
+
+				case 'Carlo'.toLowerCase():
+					 speakEs(`${inputValue.value} eres un viejito zorro, te estamos esperando en el 12 plantas, pero nadie te va a llevar para tu casa jajaja.`)
+					break
+				case 'Maykel'.toLowerCase():
+					 speakEs(`${inputValue.value} ven para topografía que van a dar botas para el campo que te sirvan y no va a haber garrapatas...`)
+					break
+
+				case 'Maikel'.toLowerCase():
+					 speakEs(`${inputValue.value} ven para topografía que van a dar botas para el campo que te sirvan y no va a haber garrapatas...`)
+					break
+				case 'Maiquel'.toLowerCase():
+					 speakEs(`${inputValue.value} ven para topografía que van a dar botas para el campo que te sirvan y no va a haber garrapatas...`)
+					 break
+				case 'Michel'.toLowerCase():
+					 speakEs(`${inputValue.value} camina más suave dando los piquetes que tienes a todo el mundo con la lengua afuera...`)
+					 break
+				case 'Miche'.toLowerCase():
+					 speakEs(`${inputValue.value} camina más suave dando los piquetes que tienes a todo el mundo con la lengua afuera...`)
+					 break
+				default:
+					speakEs(`${inputValue.value} el que ponga el nombre aquí va a jugar con las garrapatas en el campo`)
+			}
+			
+			
+		}
+		
+o
+	</script>
+</body>
+	
+</body>
+</html>
